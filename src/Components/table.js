@@ -1,4 +1,4 @@
-import Table from 'react-bootstrap/Table';
+import Table from "react-bootstrap/Table";
 
 function TableChart() {
   return (
@@ -9,6 +9,7 @@ function TableChart() {
           <th>First Name</th>
           <th>Last Name</th>
           <th>Username</th>
+          <th>Username</th>
         </tr>
       </thead>
       <tbody>
@@ -17,17 +18,32 @@ function TableChart() {
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
+          <td>@mdo</td>
+
         </tr>
         <tr>
           <td>2</td>
           <td>Jacob</td>
           <td>Thornton</td>
           <td>@fat</td>
+          <td>@mdo</td>
+
         </tr>
         <tr>
           <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
+          <td>Larry the Bird</td>
           <td>@twitter</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Larry the Bird</td>
+          <td>@twitter</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+
         </tr>
       </tbody>
     </Table>
