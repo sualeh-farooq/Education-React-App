@@ -1,0 +1,34 @@
+.card-upper {
+    display: flex;
+/* background-color: red; */
+justify-content: space-between;
+margin: 0;
+padding: 0;
+margin-bottom: 15px;
+}
+
+.card {
+    width: 100%;
+    /* padding: 5px; */
+    border-radius: 0% !important;
+    margin-top: 5px;
+    height: max-content ;
+    background-color: #efb132;
+}
+.card-total {
+    font-weight: bold;
+    font-size: medium;
+    color: #8a0a02;
+}
+
+.fill {
+    color: black;
+    font-size: xx-large;
+}
+
+.qty {
+    font-size: large;
+    color: black ;
+    align-self: center;
+    font-weight: bold;
+}

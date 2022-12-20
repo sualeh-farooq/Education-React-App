@@ -65,7 +65,7 @@ button {
   top: 0;
   left: 0;
   width: 200px;
-  height: 110%;
+  height: 100vh;
   /* background: #6d10db; */
   /* color: ; */
   background-color: white;

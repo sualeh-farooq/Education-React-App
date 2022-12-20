@@ -5,7 +5,7 @@ import { Dashboard } from './Pages/dash';
 
 function App() {
   return (
-<Dashboard />
+<Dashboard   />
   )
 }
 

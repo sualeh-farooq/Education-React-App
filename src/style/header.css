@@ -3,8 +3,9 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    margin-right: -70px;
-    margin-left: 120px;
+    /* margin-right: -70px; */
+    /* margin-left: 120px; */
+    width: 100vw;
 }
 
 .bell , .setting {
@@ -12,7 +13,7 @@
     width: max-content;
     font-size: x-large;
     margin-left: 20px;
-    color: #8a0a02;
+    color: #6a0902;
 }
 
 .top_search > input {
@@ -24,9 +25,10 @@
 }
 
 .top_right {
-    margin-right: 100px;
+    margin-right: 5%;
+    /* border: 2px solid red; */
 }
 
 .top_search {
-    margin-left: 100px;
+    margin-left: 20%;
 }
