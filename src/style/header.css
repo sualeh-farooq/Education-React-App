@@ -1,0 +1,32 @@
+.top_bg {
+    background-color: #efb132;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: -70px;
+    margin-left: 120px;
+}
+
+.bell , .setting {
+    /* border: 2px solid white; */
+    width: max-content;
+    font-size: x-large;
+    margin-left: 20px;
+    color: #8a0a02;
+}
+
+.top_search > input {
+    border-radius: 5rem;
+    border: none !important;
+    outline:  none !important;
+    padding: 5px;
+    
+}
+
+.top_right {
+    margin-right: 100px;
+}
+
+.top_search {
+    margin-left: 100px;
+}
