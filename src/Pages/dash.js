@@ -8,6 +8,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { GiPerson } from "react-icons/gi";
 import { FaSchool } from "react-icons/fa";
 import FrontCards from "../Components/cards";
+import TableChart from "../Components/table";
 
 export function Dashboard() {
   return (
@@ -45,6 +46,7 @@ export function Dashboard() {
             <div className="body-lower">
               {" "}
               <p> Table will show here </p>{" "}
+              <TableChart />  
             </div>
           </div>
         </div>
