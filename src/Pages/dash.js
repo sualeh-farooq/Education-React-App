@@ -45,7 +45,9 @@ export function Dashboard() {
             </div>
             <div className="body-lower">
               {" "}
-              <p> Table will show here </p>{" "}
+              <br />
+              <br />
+              {" "}
               <TableChart />  
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function TopHeader() {
       <div className="check">
         <div className="top_bg">
           <div className="top_search">
-            <input type="text"/>
+            <input placeholder="search" type="text"/>
           </div>
           <div className="top_right">
             <BsFillBellFill className="bell" />

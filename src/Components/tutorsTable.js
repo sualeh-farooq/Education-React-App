@@ -1,6 +1,6 @@
 import Table from "react-bootstrap/Table";
 import '../App.css'
-function TableChart() {
+function TutorsTable(TutorName , Age , SchoolName , Students , Sessions ,) {
   return (
     <Table striped bordered hover>
       <thead>
@@ -19,7 +19,6 @@ function TableChart() {
           <td>ABC School</td>
           <td>40</td>
           <td>Pending</td>
-
         </tr>
         <tr>
           <td>2</td>
@@ -27,7 +26,6 @@ function TableChart() {
           <td>ABC School</td>
           <td>38</td>
           <td>Ongoing</td>
-
         </tr>
         <tr>
           <td>3</td>
@@ -35,7 +33,6 @@ function TableChart() {
           <td>ABC School</td>
           <td>41</td>
           <td>On Going</td>
-
         </tr>
         <tr>
           <td>4</td>
@@ -43,11 +40,10 @@ function TableChart() {
           <td>ABC School</td>
           <td>30</td>
           <td>Ended</td>
-
         </tr>
       </tbody>
     </Table>
   );
 }
 
-export default TableChart;
+export default TutorsTable;

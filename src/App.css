@@ -65,7 +65,7 @@ button {
   top: 0;
   left: 0;
   width: 200px;
-  height: 100vh;
+  height: 122%;
   /* background: #6d10db; */
   /* color: ; */
   background-color: white;
@@ -121,10 +121,10 @@ button {
   height: 24px;
 }
 
-.sidebar-menu > button > span {
+.sidebar-menu > button > span > .link {
   color: #8a0a02;
-
   font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
 
@@ -146,6 +146,7 @@ button {
 .dropdown > select {
   width: 80%;
   padding: 5px;
+  color: #8a0a02;
 }
 
 
@@ -155,3 +156,8 @@ button {
 
 
 
+
+
+.heads{
+  color: #8a0a02;
+}

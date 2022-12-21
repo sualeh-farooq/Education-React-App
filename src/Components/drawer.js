@@ -1,10 +1,12 @@
 import "../App.css";
-import React from "react";
-import { DownOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Dropdown, message, Space, Tooltip } from "antd";
+import React, { useState } from "react";
 import logo from "../assets/Logo.jpg";
+import { Link } from "react-router-dom";
 
 export default function Drawer() {
+  let role = "admin";
+  let [current_role, update_role] = useState(true);
+
   return (
     <>
       <div className="main">
@@ -15,32 +17,79 @@ export default function Drawer() {
             </span>
             <div class="sidebar-inner">
               <button type="button" className="sidebar-burger"></button>
-              <nav className="sidebar-menu">
-                <span className="dropdown">
-                  <select onChange={(e)=>console.log(e.target.value)} >
-                    <option value="tutor">Tutor</option>
-                    <option value="admin">Admin</option>
-                  </select>
-                </span>
-                <button type="button">
-                  <span>Tutor</span>
-                </button>
-                <button type="button">
-                  <span>School</span>
-                </button>
-                <button type="button">
-                  <span>Students</span>
-                </button>
-                <button type="button">
-                  <span>Sessions</span>
-                </button>
-                <button type="button">
-                  <span>Calender</span>
-                </button>
-                <button type="button">
-                  <span>Invoices</span>
-                </button>
-              </nav>
+
+              {current_role ? (
+                <nav className="sidebar-menu">
+                  <span className="dropdown">
+                    {/* {console.log(role)} */}
+                    <select
+                      onChange={(e) => {
+                        role = e.target.selectedOptions[0].value;
+                        role === "tutor"
+                          ? update_role(!current_role)
+                          : update_role(current_role);
+                      }}
+                    >
+                      <option  value="admin">
+                        Admin
+                      </option>
+                      <option value="tutor">Tutor</option>
+                    </select>
+                  </span>
+                  <button type="button">
+                   <span> <Link className="link"  to='/home'> Dashboard</Link></span>
+                  </button>
+                  <button type="button">
+                   <span> <Link className="link"  to='/tutors'> Tutor</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/schools'> Schools</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/students'> Students</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/sessions'> Sessions</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/calender'> Calendar</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/invoices'> Invoices</Link></span>
+                  </button>
+                </nav>
+              ) : (
+                <nav className="sidebar-menu">
+                  <span className="dropdown">
+                    {/* {console.log(role)} */}
+                    <select
+                      onChange={(e) => {
+                        role = e.target.selectedOptions[0].value;
+                        role === "admin"
+                          ? update_role(!current_role)
+                          : update_role(current_role);
+                      }}
+                    >
+                      <option  value="admin">
+                        Admin
+                      </option>
+                      <option  value="tutor">Tutor</option>
+                    </select>
+                  </span>
+                  <button type="button">
+                  <span> <Link className="link"  to='/home'> Dashboard</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/schedule'> Schedule</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/sessions'> Sessions</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/students'> Students</Link></span>
+                  </button>
+                </nav>
+              )}
             </div>
           </nav>
         </div>
@@ -48,5 +97,3 @@ export default function Drawer() {
     </>
   );
 }
-
-
