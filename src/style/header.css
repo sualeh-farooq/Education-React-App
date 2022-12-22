@@ -21,6 +21,8 @@
     border: none !important;
     outline:  none !important;
     padding: 5px;
+    padding-left: 10px;
+    font-size: medium;
     
 }
 

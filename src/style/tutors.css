@@ -45,6 +45,16 @@
     background-color:     #8a0a02;
 }
 
+
+.btn-custom:active {
+    background-color:     #5b0600 !important; 
+    /* transition: ease 10.ms; */
+    transform: translateY(2px);
+    /* transition: ease-in 2s; */
+
+
+}
+
 .table {
     /* background-color: rebeccapurple; */
     width: 100%  !important;

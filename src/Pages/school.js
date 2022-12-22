@@ -1,4 +1,4 @@
-import TableRows from "../Components/tutortablerow";
+import TableRows from "../Components/schooltablerow";
 import "../style/tutors.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Drawer from "../Components/drawer";
@@ -11,7 +11,7 @@ import { useState } from "react";
 import { MyTimer } from "../Components/timer";
 import swal from "sweetalert";
 
-export default function Tutors() {
+export default function Schools() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const [rowsData, setRowsData] = useState([]);
@@ -51,9 +51,9 @@ export default function Tutors() {
         <div className="main_page">
           <div className="container">
             <div className="body_upper">
-              <h3>All Tutors</h3>
+              <h3>All Schools</h3>
               <Button className="btn-custom" onClick={addTableRows}>
-                Add Tutors
+                Add Schools
               </Button>
             </div>
             <Modal show={show} onHide={handleClose}>
@@ -92,12 +92,11 @@ export default function Tutors() {
                     <table className="table">
                       <thead>
                         <tr>
-                          <th>Tutor Name</th>
-                          <th>Age</th>
-                          <th>School</th>
+                          <th>School Name</th>
+                          <th>School Email</th>
+                          <th>Number of Sessions</th>
+                          <th>Tutor Assigned</th>
                           <th>Number of Students</th>
-                          <th>Session Status</th>
-                          <th>Hourly Pay Rate</th>
                         </tr>
                       </thead>
                       <tbody> {

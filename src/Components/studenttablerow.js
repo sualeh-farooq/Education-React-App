@@ -44,15 +44,6 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
         <td>
           <input
             type="text"
-            value={sessions}
-            onChange={(evnt) => handleChange(index, evnt)}
-            name="sessions"
-            className="form-control"
-          />{" "}
-        </td>
-        <td>
-          <input
-            type="text"
             value={payrate}
             onChange={(evnt) => handleChange(index, evnt)}
             name="payrate"
@@ -70,10 +61,7 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
                         console.log(child[i].firstChild.value)
                         arr.push(child[i].firstChild.value)
                     }
-                    console.log(arr)
-                    localStorage.setItem('obj',arr)
                 }
-            
             }
           >
             ✓
