@@ -1,4 +1,6 @@
 import Tutors from "../Pages/tutors";
+import '../style/swal.css'
+import swal from "sweetalert";
 
 function TableRows({ rowsData, deleteTableRows, handleChange }) {
   return rowsData.map((data, index) => {
@@ -62,7 +64,10 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
                         console.log(child[i].firstChild.value)
                         arr.push(child[i].firstChild.value)
                     }
-                }
+                    swal("School Added!", "School Added Sucesfully", "success");
+               
+                  }
+                
             }
           >
             ✓

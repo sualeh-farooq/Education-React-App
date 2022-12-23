@@ -1,6 +1,8 @@
 import Tutors from "../Pages/tutors";
 import swal from "sweetalert";
 
+import '../style/swal.css'
+
 function TableRows({ rowsData, deleteTableRows, handleChange }) {
   return rowsData.map((data, index) => {
     const { fullName, age, school , students , sessions , payrate} = data;

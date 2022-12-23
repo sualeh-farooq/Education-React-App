@@ -1,4 +1,6 @@
 import Tutors from "../Pages/tutors";
+import swal from "sweetalert";
+import '../style/swal.css'
 
 function TableRows({ rowsData, deleteTableRows, handleChange }) {
   return rowsData.map((data, index) => {
@@ -61,6 +63,7 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
                         console.log(child[i].firstChild.value)
                         arr.push(child[i].firstChild.value)
                     }
+                    swal("Student Added!", "Student Added Sucesfully", "success");
                 }
             }
           >
@@ -70,7 +73,9 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
         <td>
           <button
             className="btn btn-outline-danger"
-            onClick={(evnt) => deleteTableRows(index , evnt)}
+            onClick={(evnt) =>  {
+            swal("Student Deleted!", "Student Deleted Sucessfully", "info")
+              deleteTableRows(index , evnt)}}
           >
             x
           </button>

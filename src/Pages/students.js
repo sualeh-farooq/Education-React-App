@@ -94,11 +94,11 @@ export default function Students() {
                     <table className="table">
                       <thead>
                         <tr>
+                          <th>Student Name</th>
+                          <th>Age </th>
                           <th>School Name</th>
-                          <th>School Email</th>
-                          <th>Number of Sessions</th>
-                          <th>Tutor Assigned</th>
-                          <th>Number of Students</th>
+                          <th>Session Name</th>
+                          <th>Tutor Name</th>
                         </tr>
                       </thead>
                       <tbody> {
