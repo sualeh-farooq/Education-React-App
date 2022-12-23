@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import logo from "../assets/Logo.jpg";
 import { Link } from "react-router-dom";
 
-export default function Drawer() {
+export default function TutorsDrawer() {
   let role = "admin";
-  let [current_role, update_role] = useState(true);
+  let [current_role, update_role] = useState(false);
 
   return (
     <>
@@ -30,26 +30,32 @@ export default function Drawer() {
                           : update_role(current_role);
                       }}
                     >
-                      <option  value="admin">
-                        Admin
+                      <option  value="tutor">
+                        Tutor
                       </option>
-                      <option value="tutor">Tutor</option>
+                      <option value="admin">Admin</option>
                     </select>
                   </span>
                   <button type="button">
                    <span> <Link className="link"  to='/home'> Dashboard</Link></span>
                   </button>
                   <button type="button">
-                   <span> <Link className="link"  to='/admin//tutors'> Tutor</Link></span>
+                   <span> <Link className="link"  to='/tutors'> Tutor</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/admin/schools'> Schools</Link></span>
+                  <span> <Link className="link"  to='/schools'> Schools</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/admin/students'> Students</Link></span>
+                  <span> <Link className="link"  to='/students'> Students</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/admin/sessions'> Sessions</Link></span>
+                  <span> <Link className="link"  to='/sessions'> Sessions</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/calender'> Calendar</Link></span>
+                  </button>
+                  <button type="button">
+                  <span> <Link className="link"  to='/invoices'> Invoices</Link></span>
                   </button>
                 </nav>
               ) : (
@@ -64,10 +70,10 @@ export default function Drawer() {
                           : update_role(current_role);
                       }}
                     >
-                      <option  value="admin">
-                        Admin
+                      <option  value="tutor">
+                        Tutor 
                       </option>
-                      <option  value="tutor">Tutor</option>
+                      <option  value="admin">Admin</option>
                     </select>
                   </span>
                   <button type="button">

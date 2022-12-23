@@ -1,4 +1,4 @@
-import TableRows from "../Components/studenttablerow";
+import TableRows from "../Components/sessiontablerow";
 import "../style/tutors.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Drawer from "../Components/drawer";
@@ -10,10 +10,9 @@ import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { MyTimer } from "../Components/timer";
 import swal from "sweetalert";
+import TutorsDrawer from "../Components/tutorsDrawer";
 
-export default function Students() {
-
-  const [inputFields, setInputFields] = useState([{tutor : '' , school : '' , students : '' , session : ''}]) 
+export default function Sessions() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const [rowsData, setRowsData] = useState([]);
@@ -39,28 +38,26 @@ export default function Students() {
     const rowsInput = [...rowsData];
     rowsInput[index][name] = value;
     setRowsData(rowsInput);
-  }
-  
-  
-  ;
+  };
 
   return (
     <>
       <Drawer />
+      {/* <TutorsDrawer /> */}
       <TopHeader />
       
       <div className="main_body">
         <div className="main_page">
           <div className="container">
             <div className="body_upper">
-              <h3>All Students</h3>
+              <h3>All Sessions</h3>
               <Button className="btn-custom" onClick={addTableRows}>
-                Add Students  
+                Add Session
               </Button>
             </div>
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Add Tutor</Modal.Title>
+                <Modal.Title>Add Session</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <div className="tutor_form">
@@ -94,11 +91,12 @@ export default function Students() {
                     <table className="table">
                       <thead>
                         <tr>
+                          <th>Session Name</th>
+                          <th>Session Tutor</th>
                           <th>School Name</th>
-                          <th>School Email</th>
-                          <th>Number of Sessions</th>
-                          <th>Tutor Assigned</th>
                           <th>Number of Students</th>
+                          <th>Session Days</th>
+                          <th>Session time</th>
                         </tr>
                       </thead>
                       <tbody> {

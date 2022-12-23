@@ -9,8 +9,12 @@ import { GiPerson } from "react-icons/gi";
 import { FaSchool } from "react-icons/fa";
 import FrontCards from "../Components/cards";
 import TableChart from "../Components/table";
+import { useContext } from "react";
+import { userContext } from "../App";
 
 export function Dashboard() {
+  var data = useContext(userContext)
+  console.log (data)
   return (
     <>
       <Drawer />

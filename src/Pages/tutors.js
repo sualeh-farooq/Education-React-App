@@ -26,6 +26,7 @@ export default function Tutors() {
     };
     setRowsData([...rowsData, rowsInput]);
   };
+  
   const deleteTableRows = (index) => {
     const rows = [...rowsData];
     rows.splice(index, 1);

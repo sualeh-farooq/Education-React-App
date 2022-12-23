@@ -54,40 +54,38 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
         <td>
           <input
             type="text"
-            value={payrate}
+            value={sessions}
             onChange={(evnt) => handleChange(index, evnt)}
-            name="payrate"
+            name="sessions"
             className="form-control"
           />{" "}
         </td>
+        
         <td>
           <button
             className="btn btn-outline-success"
             onClick={
                 (evnt) => {
                     var arr =[]
-                    let val ;
                     let child = evnt.target.parentNode.parentNode.children
                     for(var i = 0; i < child.length; i++) {
-                      val = child[i].firstChild.value ;
-                        arr.push(val)           
-                       arr.map((val)=>{
-                       console.log(val)
-                      })          
+                        console.log(child[i].firstChild.value)
+                        arr.push(child[i].firstChild.value)
                     }
-                    swal("Tutor Added", "Tutor Added Successfully", "success");
+                    swal("Session Added!", "Session Added Sucesfully", "success");
                 }
+
             }
           >
-            ✓ 
+            ✓
           </button>
         </td>
         <td>
           <button
             className="btn btn-outline-danger"
             onClick={(evnt) => {
-              swal("Tutor Deleted!", "Tutor Deleted Sucessfully", "info")
-             deleteTableRows(index , evnt)}}
+            swal("Session Deleted!", "Session Deleted Sucessfully", "info")
+            deleteTableRows(index , evnt) }}
           >
             x
           </button>
