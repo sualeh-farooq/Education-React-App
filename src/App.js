@@ -9,6 +9,9 @@ import Students from './Pages/students';
 import { createContext, useContext } from 'react';
 import Sessions from './Pages/sessions';
 import NotFound from './Pages/notFound';
+import Tutors_School from './Pages/tutors_school';
+import Tutors_Session from './Pages/tutors_session';
+import Tutors_Students from './Pages/tutors_students';
 export const userContext = createContext()
 export function Home() {
 return <>
@@ -17,7 +20,6 @@ return <>
 </userContext.Provider>
 </>
 }
-
 export default function App() {
  return <>
 <BrowserRouter>
@@ -28,6 +30,9 @@ export default function App() {
   <Route path='/admin/schools' element={<Schools />}></Route>
   <Route path='/admin/students' element={<Students />}></Route>
   <Route path='/admin/sessions' element={<Sessions />}></Route>
+  <Route path='/tutors/schools' element={<Tutors_School />}></Route>
+  <Route path='/tutors/sessions' element={<Tutors_Session />}></Route>
+  <Route path='/tutors/students' element={<Tutors_Students />}></Route>
   <Route path='/*' element={<NotFound />}></Route>
 </Routes>
 </BrowserRouter>

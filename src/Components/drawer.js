@@ -74,13 +74,13 @@ export default function Drawer() {
                   <span> <Link className="link"  to='/home'> Dashboard</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/schedule'> Schedule</Link></span>
+                  <span> <Link className="link"  to='/tutors/schools'> School</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/sessions'> Sessions</Link></span>
+                  <span> <Link className="link"  to='/tutors/sessions'> Sessions</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/students'> Students</Link></span>
+                  <span> <Link className="link"  to='/tutors/students'> Students</Link></span>
                   </button>
                 </nav>
               )}

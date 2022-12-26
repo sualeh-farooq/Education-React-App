@@ -10,6 +10,7 @@ import { Modal } from "react-bootstrap";
 import { useState } from "react";
 import { MyTimer } from "../Components/timer";
 import swal from "sweetalert";
+import NotificationCheck from '../Components/notifications'
 
 export default function Tutors() {
   const [show, setShow] = useState(false);
@@ -111,6 +112,7 @@ export default function Tutors() {
                         />
                       </tbody>
                     </table>
+
                   </div>
                   <div className="col-sm-4"></div>
                 </div>

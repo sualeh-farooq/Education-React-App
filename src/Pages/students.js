@@ -16,7 +16,7 @@ export default function Students() {
   const [inputFields, setInputFields] = useState([{tutor : '' , school : '' , students : '' , session : ''}]) 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const [rowsData, setRowsData] = useState([]);
+  const [rowsData, ] = useState([]);
   const addTableRows = () => {
     const rowsInput = {
       fullName: "",

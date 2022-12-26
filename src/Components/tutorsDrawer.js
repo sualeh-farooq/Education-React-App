@@ -21,7 +21,6 @@ export default function TutorsDrawer() {
               {current_role ? (
                 <nav className="sidebar-menu">
                   <span className="dropdown">
-                    {/* {console.log(role)} */}
                     <select
                       onChange={(e) => {
                         role = e.target.selectedOptions[0].value;
@@ -40,16 +39,16 @@ export default function TutorsDrawer() {
                    <span> <Link className="link"  to='/home'> Dashboard</Link></span>
                   </button>
                   <button type="button">
-                   <span> <Link className="link"  to='/tutors'> Tutor</Link></span>
+                   <span> <Link className="link"  to='/admin/tutors'> Tutor</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/schools'> Schools</Link></span>
+                  <span> <Link className="link"  to='/admin/schools'> Schools</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/students'> Students</Link></span>
+                  <span> <Link className="link"  to='/admin/students'> Students</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/sessions'> Sessions</Link></span>
+                  <span> <Link className="link"  to='admin/sessions'> Sessions</Link></span>
                   </button>
                   <button type="button">
                   <span> <Link className="link"  to='/calender'> Calendar</Link></span>
@@ -80,13 +79,13 @@ export default function TutorsDrawer() {
                   <span> <Link className="link"  to='/home'> Dashboard</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/schedule'> Schedule</Link></span>
+                  <span> <Link className="link"  to='/tutors/schools'> School</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/sessions'> Sessions</Link></span>
+                  <span> <Link className="link"  to='/tutors/sessions'> Sessions</Link></span>
                   </button>
                   <button type="button">
-                  <span> <Link className="link"  to='/students'> Students</Link></span>
+                  <span> <Link className="link"  to='/tutors/students'> Students</Link></span>
                   </button>
                 </nav>
               )}
